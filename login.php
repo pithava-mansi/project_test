@@ -1,6 +1,6 @@
 <?php
-   // include 'admin/error.php';
-  session_start();
+   include 'admin/error.php';
+    session_start();
  if (isset($_SESSION['ID'])) {
      header("Location:dashboard.php");
      exit();

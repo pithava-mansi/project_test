@@ -1,7 +1,7 @@
 <?php 
 include 'admin/error.php';
 session_start();
-// // Include database connection file
+// Include database connection file
 include_once('admin/controller/database/db.php');
 
 if(2==$_SESSION['ROLE']){
