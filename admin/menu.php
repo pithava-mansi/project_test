@@ -1,12 +1,9 @@
 <?php 
 include '../admin/error.php';
-session_start();
-// Include database connection file
+// session_start();
+// // Include database connection file
 include_once('../admin/controller/database/db.php');
-//  if (!isset($_SESSION['ID'])) {
-//     header("Location:index.php");
-//     exit();
-//  }
+
 if(0==$_SESSION['ROLE']){
 ?>
 <nav class="navbar container align-item-center nav-item  m-auto navbar-expand-lg mt-3 p-2 mb-3">
