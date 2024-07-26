@@ -21,7 +21,7 @@ if(0==$_SESSION['ROLE']){
 
 <body>
 	<?php include 'menu.php'; ?>
-    <?php include 'footer.php'; ?>
+    <!-- <?php include 'footer.php'; ?> -->
 	
 
 	<?php include 'js.php'; ?>
