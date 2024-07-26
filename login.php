@@ -90,7 +90,7 @@
             </div>
         </div>
     </div>
-    <?php include 'css.php'; ?>
+    <?php include 'js.php'; ?>
 
 </body>
 

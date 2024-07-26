@@ -4,7 +4,7 @@ session_start();
 // Include database connection file
 include_once('admin/controller/database/db.php');
 if (!isset($_SESSION['ID'])) {
-    header("Location:login.php");
+    header("Location:index.php");
     exit();
 }
 if(2==$_SESSION['ROLE']){

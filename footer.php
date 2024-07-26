@@ -1,10 +1,10 @@
-<footer>
-    <div style="text-align: center; padding: 20px; background-color: #f1f1f1;">
-        <p>&copy; <?php echo date("Y"); ?> Agrimart shop All rights reserved.</p>
-        <!-- <p>
-            ">Privacy Policy</> |
-            <a href="terms.php">Terms of Service</a> |
-            <a href="contact.php">Contact Us</a>
-        </p> -->
+<footer class="container-fluid align-item-center footer  ms-3 mb-3">
+    <div>
+        <a href="about_us.php">About Us</a>
+        <a href="contact_us.php">Contact</a>
+        <a href="privacy.php">Privacy Policy</a>
+    </div>
+    <div>
+        <p>&copy; <?php echo date("Y"); ?> Your Company. All Rights Reserved.</p>
     </div>
 </footer>

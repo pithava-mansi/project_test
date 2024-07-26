@@ -67,7 +67,6 @@ include 'admin/controller/user_controller.php';
             </div>
         </div>
     </div>
-
     <?php include 'js.php'; ?>
 </body>
 
