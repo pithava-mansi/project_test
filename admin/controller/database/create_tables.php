@@ -12,7 +12,7 @@
     die("Connection failed: " . mysqli_connect_error());
     }
     
-    // sql to create Users table
+    // sql to create product table
     $sql="CREATE TABLE products (
         product_id INT AUTO_INCREMENT PRIMARY KEY,
         product_name VARCHAR(255) NOT NULL,
