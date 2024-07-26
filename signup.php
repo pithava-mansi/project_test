@@ -1,5 +1,5 @@
 <?php
-//include 'error.php
+include 'admin/error.php';
 
 include 'admin/controller/database/db.php';
 include 'admin/controller/user_controller.php';
