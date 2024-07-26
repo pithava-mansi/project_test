@@ -32,14 +32,14 @@ if(0==$_SESSION['ROLE']){
 				?>
             <div class="col-lg-4 col-md-4 col-sm-12 ">
                 <div class="card m-1 text-center p-1">
-                    <h4>
+                    <!-- <h4>
                         <?php echo 'username: '.$row["username"]; ?>
                     </h4>
                     <div class="">
                         <p><?php echo 'fname: '.$row["fname"]; ?></p>
                         <p><?php echo 'lname: '.$row["lname"]; ?></p>
                         <p><?php echo 'email: '.$row["email"]; ?></p>
-                    </div>
+                    </div> -->
 
                 </div>
 

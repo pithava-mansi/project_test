@@ -28,7 +28,7 @@ if (0 == $_SESSION['ROLE']) {
 
         <div class="row p-2 mt-1">
 
-            <div class="product-card text-center">
+            <div class="user-card text-center">
                 <form class="mt-3" action="" method="POST" enctype="multipart/form-data">
 
                     <div class="input-group mb-3">
@@ -87,9 +87,9 @@ if (0 == $_SESSION['ROLE']) {
                     ?>
             <div class="col-lg-4 col-md-4 col-sm-12 ">
 
-                <div class="card m-1 text-center p-1">
+                <div class="user-card m-1 text-center p-1">
 
-                    <div class="">
+                    <div>
                         <p>
                             <?php echo $row["product_id"]; ?>
                         </p>
