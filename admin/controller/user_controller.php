@@ -1,9 +1,11 @@
 <?php 
 class users
     {
+        public $db;  // Declare the property
+        
         function __construct(){        
             $conn=mysqli_connect('localhost','root','','agrimart');
-            $this->db=$conn;
+            $this->db=$conn;  //Initialize the property
             if(mysqli_connect_error()){
                 echo 'failed to connect'.mysqli_connect_error();
             }

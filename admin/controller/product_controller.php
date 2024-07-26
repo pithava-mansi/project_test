@@ -1,18 +1,15 @@
 <?php 
 class products
     {
+        public $db;  // Declare the property
+
         function __construct(){        
             $conn=mysqli_connect('localhost','root','','agrimart');
-            $this->db=$conn;
+            $this->db=$conn; //Initialize the property
             if(mysqli_connect_error()){
                 echo 'failed to connect'.mysqli_connect_error();
             }
-        }/*
-        product_id INT AUTO_INCREMENT PRIMARY KEY,
-        product_name VARCHAR(255) NOT NULL,
-        product_description TEXT,
-        product_price DECIMAL(10, 2) NOT NULL,
-        product_image VARCHAR(255)*/
+        }
         function insert($product_name,$product_description,$product_price,$folder)
         {
             $sql  = "INSERT INTO `products`(`product_name`, `product_description`, `product_price`, `product_image`) VALUES ($product_name,$product_description,$product_price,$folder)";       
