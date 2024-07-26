@@ -35,13 +35,14 @@ if (0 == $_SESSION['ROLE']) {
                         <span class="input-group-text col-2" id="productname">
                             <h5><i class="bi bi-journal"></i>Product</h5>
                         </span>
-                        <input type="text" name="product_name" class="p-2 col-8" placeholder="Add New Product">                       
+                        <input type="text" name="product_name" class="p-2 col-8" placeholder="Add New Product">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text col-2" id="productdescription">
                             <h5><i class="bi bi-journal"></i>description</h5>
                         </span>
-                        <input type="text" name="product_description" class="p-2 col-8" placeholder="Add Product Description">                       
+                        <input type="text" name="product_description" class="p-2 col-8"
+                            placeholder="Add Product Description">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text col-2" id="productprice">
@@ -60,26 +61,6 @@ if (0 == $_SESSION['ROLE']) {
                 </form>
             </div>
         </div>
-        <?php /*
-          $data = $obj->view();
-          while ($row = mysqli_fetch_assoc($data)){
-             ?>
-        <div class="col-lg-4 col-md-4 col-sm-12 ">
-            <div class="card viral-card m-1 text-center p-1">
-                <h4>
-                    <?php echo $row["username"]; ?>
-                </h4>
-                <div class="">
-                    <p><?php echo $row["fname"]; ?></p>
-                    <p><?php echo $row["lname"]; ?></p>
-                    <p><?php echo $row["email"]; ?></p>
-                </div>
-
-            </div>
-
-        </div>
-        <?php  } */
-            ?>
         <div class="row mt-1">
             <?php
                 $data = $obj->view();

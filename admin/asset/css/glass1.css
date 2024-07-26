@@ -80,15 +80,7 @@ input:focus {
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(7, 6, 6, 0.4);
 }
-.product-card{
-    color: black;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(52, 54, 91, 0.563);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border: 2px solid rgba(10, 10, 10, 0.4);
-}
+
 .user-card{
     color: rgb(247, 238, 238);
     background: rgba(238, 223, 223, 0.4);
@@ -103,4 +95,7 @@ input:focus {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border: 2px solid rgba(243, 239, 239, 0.4);
+}
+.footer{
+    text-align: center; padding: 20px; background-color: #f1f1f1;
 }

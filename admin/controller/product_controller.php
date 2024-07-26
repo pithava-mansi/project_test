@@ -22,13 +22,13 @@ class products
             $sql = "UPDATE `courses` SET `course`='$course' WHERE `course_id`='$id'";
             $res = mysqli_query($this->db, $sql);
             return $res;
-        }
-        function delete($id)
+        }*/
+        function delete($product_id)
         {
-            $sql = "DELETE FROM `courses` WHERE `course_id`='$id'";
+            $sql = "DELETE FROM `products` WHERE `product_id`='$product_id'";
             $res = mysqli_query($this->db, $sql);
             return $res;
-        }*/
+        }
         function view()
         {
                 
@@ -45,7 +45,8 @@ class products
 
         $file=$_FILES['product_image']['name'];
 	    $tname=$_FILES['product_image']['tmp_name'];
-	    $folder="./asset/img".$file;
+    
+	    $folder="asset/img/".$file;
 	    move_uploaded_file($tname,$folder);
 
         $result=$obj->insert($product_name,$product_description,$product_price,$folder);
@@ -68,14 +69,14 @@ class products
         } else {
             echo "alert('data not updated successfully')";
         }
-    } elseif (isset($_POST['delete'])) {
-        $id = $_POST['id'];
-        // $id=$_POST['course_id'];
-        $res = $obj->delete($id);
+    } 
+    else*/if (isset($_POST['delete'])) {
+        $product_id=$_POST['product_id'];
+        $res = $obj->delete($product_id);
         if ($res) {
-            header("location:courses.php");
+            header("location:product.php");
         } else {
             echo "not deleted";
         }
-    }*/
+    }
 ?>
