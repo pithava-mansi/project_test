@@ -1,5 +1,5 @@
 <?php 
-//include 'error.php';
+include 'error.php';
 session_start();
 // Include database connection file
 include_once('controller/database/db.php');

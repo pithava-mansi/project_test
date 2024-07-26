@@ -2,6 +2,7 @@
 class feedback
     {   
         public $db; // Declare the property
+        
         function __construct(){        
             $conn=mysqli_connect('localhost','root','','agrimart');
             $this->db=$conn; // Initialize the property
@@ -31,59 +32,51 @@ class feedback
         function view()
         {
                 
-            $sql = "SELECT * FROM `users`";
+            $sql = "SELECT * FROM `feedback`";
             $res = mysqli_query($this->db,$sql);
             return $res;
         }
     }
-    $obj = new users();
+    $obj = new feedback();
     if (isset($_POST['submit'])) {
-        
-        $fname= $conn->real_escape_string($_POST['fname']);
-        $lname= $conn->real_escape_string($_POST['lname']);
-        $email= $conn->real_escape_string($_POST['email']);
-        $username= $conn->real_escape_string($_POST['username']);
-        $pass=$conn->real_escape_string(md5($_POST['password']));
-        $role=$conn->real_escape_string($_POST['role']);
 /*
 
-        $fname=$_POST['fname'];
-        $lname=$_POST['lname'];
-        $email=$_POST['email'];
-        $username=$_POST['username'];
-        $pass=$_POST['pass'];
-        $role=$_POST['role'];
+        $=$_POST[''];
+        $=$_POST[''];
+        $=$_POST[''];
+        $=$_POST[''];
+        $=$_POST[''];
+        $=$_POST[''];
       */  
-        $result=$obj->insert($fname,$lname,$email,$username,$pass,$role);
+        $result=$obj->insert();
         
         if ($result==true) {
-          header("Location:login.php");
+          header("Location:");
           die();
         }else{
-          $errorMsg  = "You are not Registred..Please Try again";
+          $errorMsg  = "error to insert data";
           echo $errorMsg;
         }   
     }/*
     if (isset($_POST['update'])) {
-        $id = $_POST['course_id'];
-        $course = $_POST['course'];
+        $id = $_POST[''];
+        $= $_POST[''];
     
-        $res = $obj->update($id, $course);
+        $res = $obj->update();
         if ($res) {
-            header("location:courses.php");
+            header("location:");
         } else {
             echo "alert('data not updated successfully')";
         }
     } elseif (isset($_POST['delete'])) {
         $id = $_POST['id'];
-        // $id=$_POST['course_id'];
+        // $id=$_POST[''];
         $res = $obj->delete($id);
         if ($res) {
-            header("location:courses.php");
+            header("location:");
         } else {
             echo "not deleted";
         }
     }*/
-    
-    //$obj1=new courses();
+
 ?>
