@@ -21,7 +21,7 @@ if (0 == $_SESSION['ROLE']) {
     <?php include 'css.php'; ?>
 </head>
 
-<body class="">
+<body>
     <?php include 'menu.php'; ?>
 
     <div class="container  ">
