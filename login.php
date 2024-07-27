@@ -1,20 +1,21 @@
 <?php
    include 'admin/error.php';
     session_start();
- if (isset($_SESSION['ID'])) {
-     header("Location:dashboard.php");
-     exit();
-  }
+//  if (isset($_SESSION['ID'])) {
+//      header("Location:dashboard.php");
+//      exit();
+//   }
   //Include database connectivity
     
   include_once('admin/controller/database/db.php');
   
   if (isset($_POST['submit'])) {
       $errorMsg = "";
+      $email = $conn->real_escape_string($_POST['email']);
       $username = $conn->real_escape_string($_POST['username']);
       $password = $conn->real_escape_string(md5($_POST['password']));
       
-  if (!empty($username) || !empty($password)) {
+  if (!empty($username) && !empty($password) && !empty($email)) {
         $sql  = "SELECT * FROM users WHERE username = '$username'";
 
         $result =mysqli_query($conn,$sql);
@@ -29,6 +30,7 @@
                 header("Location:admin/index.php");
             }elseif(2==$row['user_role']){
                 header("Location:index.php");
+                exit();
             }
             die();                              
         }else{
@@ -45,7 +47,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login</title>
     <?php include 'css.php'; ?>
 </head>
 
@@ -65,22 +67,22 @@
 
                     <div class="input-group mb-3">
                         <span class="input-group-text m-1 p-2" id="Email"><i class="bi bi-envelope-at"></i></span>
-                        <input type="email" name="email" class="m-1 p-2" placeholder="Email">
+                        <input type="email" name="email" class="m-1 p-2" placeholder="Email" required>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text m-1 p-2" id="username"><i class="bi bi-person-circle"></i></span>
-                        <input type="text" name="username" class="m-1 p-2" placeholder="Username">
+                        <input type="text" name="username" class="m-1 p-2" placeholder="Username" required>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text m-1 p-2" id="password"><i class="bi bi-shield-lock"></i></span>
-                        <input type="password" name="password" class="m-1 p-2" placeholder="Password">
+                        <input type="password" name="password" class="m-1 p-2" placeholder="Password" required>
                     </div>
 
                     <div class="mb-3 text-center">
-                        <button type="submit" name="submit" class="btn">login</button>
+                        <button type="submit" name="submit" class="btn col-">login</button>
                     </div>
                     <div class="mb-3 text-center text-dark">
-                        <h4>You Have No Account To:<a href="signup.php" type="submit"> Signup</a></h4>
+                        <h4>You Have No Account To: <a href="signup.php" type="submit" class="btn"> Signup</a></h4>
                         
                     </div>
                 </form>
