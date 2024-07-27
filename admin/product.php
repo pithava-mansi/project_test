@@ -54,7 +54,7 @@ if (0 == $_SESSION['ROLE']) {
                         <span class="input-group-text col-2" id="productprice">
                             <h5><i class="bi bi-journal"></i>Product_image</h5>
                         </span>
-                        <input type="file" name="product_image" class="p-2 col-8" placeholder="Add Product Price">
+                        <input type="file"  accept="image/*" name="product_image" class="p-2 col-8" placeholder="Add Product Price">
 
                         <button type="submit" name="submit" class="btn p-2 col-2">submit</button>
                     </div>

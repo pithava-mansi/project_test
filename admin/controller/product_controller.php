@@ -12,7 +12,7 @@ class products
         }
         function insert($product_name,$product_description,$product_price,$folder)
         {
-            $sql  = "INSERT INTO `products`(`product_name`, `product_description`, `product_price`, `product_image`) VALUES ($product_name,$product_description,$product_price,$folder)";       
+            $sql  = "INSERT INTO `products` (`product_name`, `product_description`, `product_price`, `product_image`) VALUES ($product_name,$product_description,$product_price,$folder)";       
             $res=mysqli_query($this->db,$sql);
             return $res;
         }
@@ -45,8 +45,11 @@ class products
 
         $file=$_FILES['product_image']['name'];
 	    $tname=$_FILES['product_image']['tmp_name'];
+
+        
     
 	    $folder="asset/img/".$file;
+        echo $folder;
 	    move_uploaded_file($tname,$folder);
 
         $result=$obj->insert($product_name,$product_description,$product_price,$folder);
