@@ -5,6 +5,7 @@
         <a href="privacy.php">Privacy Policy</a>
     </div>
     <div>
-        <p>&copy; <?php echo date("Y"); ?> Your Company. All Rights Reserved.</p>
+        <p>&copy; <?php echo date("Y"); ?> Your Company. All Rights Reserved.<i class="bi bi-instagram align-item-right"></i></p>
+        
     </div>
 </footer>
