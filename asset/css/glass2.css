@@ -25,7 +25,7 @@ nav {
 }
 
 .btn {
-    background: rgba(33, 163, 152, 0.25);
+    background: rgba(255, 238, 0, 0.25);
     box-shadow: 0 8px 32px 0 rgba(108, 72, 112, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -34,7 +34,7 @@ nav {
 }
 
 .btn:hover {
-    background: rgba(8, 206, 51, 0.25);
+    background: rgba(84, 223, 4, 0.25);
     box-shadow: 0 8px 32px 0 rgba(69, 35, 73, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -43,7 +43,7 @@ nav {
     color: black;
 }
 input{
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(226, 222, 222, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.4px);
@@ -69,8 +69,8 @@ input:focus {
     border: 1px solid rgba(7, 6, 6, 0.4);
 }
 .logo{
-    height: 50%;
-    width: 50%;
+  height: 30%;
+  width: 30%;
 }
 .img{
     border-radius: 16px;
@@ -90,14 +90,13 @@ input:focus {
 }
 .card{
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(231, 216, 216, 0.2);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(15, 15, 15, 0.18);
+    border: 2px solid rgba(15, 15, 15, 0.18);
     color: black;
 }
-
 .footer {
 
     padding: 10px;

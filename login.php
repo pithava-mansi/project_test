@@ -55,10 +55,10 @@
 
         <div class="row  d-flex  justify-content-center  mt-3">
             <div class="col-md-4  col-sm-12">
-            <div class="d-flex  justify-content-center  mt-3">
-							<img class="logo" src="asset/css/image/admin-logo.png" alt="" srcset="">
-						</div>
-                <form class="mt-3 aline-item-center form p-2 mb-3" action="" method="POST">
+                <div class="d-flex  justify-content-center  mt-3">
+                    <img class="logo" src="asset/css/image/admin-logo.png" alt="" srcset="">
+                </div>
+                <form class="mt-3 text-center form p-2 mb-3" action="" method="POST">
                     <div class="text text-center text-dark">
                         <h3>Login</h3>
                     </div>
@@ -79,12 +79,9 @@
                     <div class="mb-3 text-center">
                         <button type="submit" name="submit" class="btn">login</button>
                     </div>
-                    <div class="mb-3 text-center text-black">
-                        <h3>You Have No Account TO</h3>
-                    </div>
-
-                    <div class="mb-3 text-center">
-                        <a href="signup.php" type="submit" class="btn">Create Account</a>
+                    <div class="mb-3 text-center text-dark">
+                        <h4>You Have No Account To:<a href="signup.php" type="submit"> Signup</a></h4>
+                        
                     </div>
                 </form>
             </div>

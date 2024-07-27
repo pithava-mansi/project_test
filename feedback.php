@@ -23,18 +23,20 @@
                         <form method="post" action="">
                             <div class="form-group">
                                 <label for="name" class="mb-2">Name</label>
-                                <input type="text" class="form-control mb-2" id="name" name="name" required>
+                                <input type="text" class="form-control mb-3" id="name" name="name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="mb-2">Email</label>
-                                <input type="email" class="form-control mb-2" id="email" name="email" required>
+                                <input type="email" class="form-control mb-3" id="email" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="message" class="mb-2">Message</label>
-                                <textarea class="form-control mb-2" id="message" name="message" rows="5"
+                                <textarea class="form-control mb-3" id="message" name="message" rows="5"
                                     required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-center m-3">Submit Feedback</button>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-center m-3 p-2">Submit Feedback</button>
+                            </div>
                         </form>
                     </div>
                 </div>

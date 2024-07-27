@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item toggle">
-                        <a class="nav-link  " href="index.php"><i class="bi bi-house-door-fill"></i>Home</a>
+                        <a class="nav-link  " href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="about_us.php">About us</a>
@@ -21,15 +21,13 @@
                     <li class="nav-item ">
                         <a class="nav-link " href="feedback.php">Feedback</a>
                     </li>
-                    <li class="nav-item dark  ">
-                        <h4 id=" " class="m-1 "><i class="sun-moon bi bi-sun"></i></h4>
-                    </li>
+                  
                 </ul>
                 <form class="d-flex">
                     <a class="nav-link text-dark" href="login.php"><span class="btn">Login</span></a>
                 </form>
-<!-- 
-                <?php
+
+                <!-- <?php
                     include 'admin/error.php';
                     if(2==$_SESSION['ROLE'])
                     {?>

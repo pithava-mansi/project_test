@@ -10,7 +10,43 @@
 
 <body>
     <?php include 'menu.php'; ?>
-    <div class="container-fluid">
+    <div class="row  d-flex  justify-content-center  mt-3">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card mb-2">
+                    <div class="card-header text text-dark text-center">
+                        <h3>Contact Us</h3>
+                    </div>
+
+                    <div class="card-body text text-dark">
+                        <form method="post" action="">
+                            <div class="form-group">
+                                <label for="name" class="mb-2">Name</label>
+                                <input type="text" class="form-control mb-3" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="mb-2">Email</label>
+                                <input type="email" class="form-control mb-3" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobileno" class="mb-2">Mobile No</label>
+                                <input type="number" class="form-control mb-3" id="mobileno" name="mobileno" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="mb-2">Message</label>
+                                <textarea class="form-control mb-3" id="message" name="message" rows="5"
+                                    required></textarea>
+                            </div>
+                           <div class="text-center">
+                           <button type="submit" class="btn btn-center m-3 col-3 p-2">Submit</button>
+                           </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container-fluid">
 
         <div class="row  d-flex  justify-content-center  mt-3">
             <div class="col-md-4  col-sm-12">
@@ -38,7 +74,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
     <?php include 'js.php'; ?>
 </body>
 
