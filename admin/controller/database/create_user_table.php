@@ -20,6 +20,8 @@
         email VARCHAR(255) NOT NULL,
         username VARCHAR(10) NOT NULL,
         pass VARCHAR(255) NOT NULL,
+        mobile VARCHAR(10) NOT NULL,
+        address VARCHAR(300) NOT NULL,
         user_role INT(1) NOT NULL DEFAULT '2'
     )";
     

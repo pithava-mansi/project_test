@@ -1,8 +1,3 @@
-<?php 
-include '../admin/error.php';
-
-if(0==$_SESSION['ROLE']){
-?>
 <nav class="navbar container align-item-center nav-item  m-auto navbar-expand-lg mt-3 p-2 mb-3">
     <div class="container-fluid text-center">
 
@@ -14,26 +9,31 @@ if(0==$_SESSION['ROLE']){
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item toggle">
-                    <a class="nav-link  " href="index.php">Home</a>
+                    <a class="nav-link  " href="index.php"><i class="bi bi-house-door-fill"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="users.php">Users</a>
+                    <a class="nav-link " href="about_us.php">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="product.php">Product</a>
+                    <a class="nav-link " href="contact_us.php"><i class="bi bi-telephone-fill"></i> Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="product.php">products</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link " href="feedback.php">Feedback</a>
                 </li>
-                <li class="nav-item dark  ">
-                    <h4 id=" " class="m-1 "><i class="sun-moon bi bi-sun"></i></h4>
-                </li>
+
             </ul>
+            <?php
+                    include 'admin/error.php';
+                    if(2==$_SESSION['ROLE'])
+                    {?>
             <form class="d-flex">
-			<a class="nav-link text-dark" href="logout.php">Hi, <?php echo ucwords($_SESSION['USERNAME']); ?> <span class="btn text-danger"><i class="bi bi-person"></i> Logout</span></a>
-			</form>
-           
+                <a class="nav-link text-dark" href="logout.php">Hi, <?php echo ucwords($_SESSION['USERNAME']); ?>
+                    <span class="btn text-danger"><i class="bi bi-person"></i> Logout</span></a>
+            </form>
+            <?php }?>
         </div>
     </div>
 </nav>
-<?php }?>

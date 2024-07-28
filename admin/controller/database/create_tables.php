@@ -1,4 +1,3 @@
-<?php include 'db.php'; ?>
 <?php
     $servername="localhost";
     $username="root";
@@ -18,7 +17,7 @@
         product_name VARCHAR(255) NOT NULL,
         product_description TEXT,
         product_price DECIMAL(10, 2) NOT NULL,
-        product_image VARCHAR(255),
+        product_image VARCHAR(255)  NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
     if (mysqli_query($conn, $sql)) {

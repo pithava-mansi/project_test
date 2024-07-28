@@ -16,7 +16,7 @@ include 'admin/controller/user_controller.php';
 
 <body>
     <?php include 'menu.php'; ?>
-    <div class="container-fluid   ">
+    <div class="container-fluid">
 
         <div class="row  d-flex  justify-content-center  mt-3">
             <div class="col-md-4  col-sm-12">
@@ -50,6 +50,15 @@ include 'admin/controller/user_controller.php';
                         <span class="input-group-text m-1 p-2" id="basic-addon1"><i
                                 class="bi bi-shield-lock"></i></span>
                         <input type="password" name="password" class="m-1 p-2" placeholder="Password" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text m-1 p-2" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
+                        <input type="number" name="mobileno" class="m-1 p-2" placeholder="mobile no" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text m-1 p-2" id="basic-addon1"><i
+                                class="bi bi-house"></i></span>
+                        <input type="text" name="address" class="m-1 p-2" placeholder="address" required>
                     </div>
                     <div class="input-group mb-3">
                         <input type="number" name="role" class="m-1 p-2" value="2" hidden>

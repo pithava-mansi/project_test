@@ -12,14 +12,14 @@ class products
         }
         function insert($product_name,$product_description,$product_price,$folder)
         {
-            $sql  = "INSERT INTO `products` (`product_name`, `product_description`, `product_price`, `product_image`) VALUES ($product_name,$product_description,$product_price,$folder)";       
+            $sql  = "INSERT INTO `products` (`product_name`, `product_description`, `product_price`,`product_image`) VALUES ('$product_name','$product_description','$product_price','$folder')";       
             $res=mysqli_query($this->db,$sql);
             return $res;
         }
         /*
-        function update($id, $course)
+        function update()
         {
-            $sql = "UPDATE `courses` SET `course`='$course' WHERE `course_id`='$id'";
+            $sql = "UPDATE `products` SET `product`='$product' WHERE `product_id`='$'";
             $res = mysqli_query($this->db, $sql);
             return $res;
         }*/
@@ -48,14 +48,13 @@ class products
 
         
     
-	    $folder="asset/img/".$file;
-        echo $folder;
-	    move_uploaded_file($tname,$folder);
+	    $folder="./asset/image/".$file;
+	    move_uploaded_file($file,$folder);
 
         $result=$obj->insert($product_name,$product_description,$product_price,$folder);
         
         if ($result==true) {
-          header("Location:index.php");
+          header("Location:product.php");
           die();
         }else{
           $errorMsg  = "You are not Registred..Please Try again";

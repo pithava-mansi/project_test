@@ -1,4 +1,4 @@
-<footer class="container-fluid align-item-center footer  ms-3 mb-3">
+<footer class="container d-flex align-item-center footer ms-5  mt-3  mb-3">
     <div>
         <a href="about_us.php">About Us</a>
         <a href="contact_us.php">Contact</a>

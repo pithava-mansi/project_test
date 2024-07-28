@@ -13,64 +13,65 @@ if(2==$_SESSION['ROLE']){
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Saustudy</title>
-	<?php include 'css.php'; ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agrimart</title>
+    <?php include 'css.php'; ?>
 </head>
 
 <body>
-	<?php include 'menu.php'; ?>
-<!-- 
-	<div class="container ">
-		<div class="row mt-1">
-			<?php include 'slider.php'; ?>
-		</div>
-		<div class="row mt-1">
+    <?php include 'menu2.php'; ?>
 
-			<?php
-			$sql = "SELECT * FROM product";
+    <div class="container ">
+        <!-- <div class="row mt-1">
+            <?php include 'slider.php'; ?>
+        </div> -->
+        <div class="row mt-1">
+
+            <?php
+			$sql = "SELECT * FROM products";
 			$res = mysqli_query($conn, $sql);
 
 			while ($row = mysqli_fetch_assoc($res)) {
 				?>
-				<div class="col-lg-4 col-md-4 col-sm-12 ">
-					<div class="card m-1 text-center p-1">
-						<h4>
-							<?php echo $row["product_name"]; ?>
-						</h4>
-						<h4>
-						<?php echo $row["product_description"]; ?>
-						</h4>
-						<h4>
-						<?php echo $row["product_price"]; ?>
-						</h4>
-						<h4>
-							<img src="<?php echo $row["product_image"]; ?>" height="80px" width="80px">
-						</h4>
-						<h4>
-						<?php echo $row["create_at"]; ?>
-						</h4>
-						<form action="addtocart.php" method="POST">
-							<button class="btn m-3" type="submit" name="product_id"
-								value="<?php echo $row["product_id"]; ?>">details</button>
-						</form>
-					</div>
+            <div class="col-lg-4 col-md-4 col-sm-12 ">
+                <div class="card m-1 text-center p-1">
+                <p>
+                            <img src="<?php $row["product_image"]; ?>" height="80px" width="80px">
+                        </p>
+                        <p>
+                            <?php echo 'product name: '. $row["product_name"]; ?>
+                        </p>
+                        <p>
+                            <?php echo 'product description: '. $row["product_description"]; ?>
+                        </p>
+                        <p>
+                            <?php echo 'product price: '. $row["product_price"]; ?>
+                        </p>
 
-				</div>
-			<?php }
+                        <p>
+                            <?php echo 'create date: '. $row["created_at"]; ?>
+                        </p>
+                    <form action="addtocart.php" method="POST">
+                        <button class="btn m-3" type="submit" name="product_id"
+                            value="<?php echo $row["product_id"]; ?>">addtocart</button>
+                    </form>
+                </div>
+
+            </div>
+            <?php }
 			?>
-		</div>
-       
-	</div> -->
-    <?php include 'footer.php'; ?>
-	
+        </div>
 
-	<?php include 'js.php'; ?>
+    </div>
+    <?php include 'footer.php';?>
+
+
+    <?php include 'js.php'; ?>
 </body>
 
 </html>
-        <?php }else{
+<?php }else{
             session_destroy();
             header("Location:index.php");
         }

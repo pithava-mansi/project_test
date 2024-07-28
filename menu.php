@@ -18,6 +18,9 @@
                     <li class="nav-item">
                         <a class="nav-link " href="contact_us.php"><i class="bi bi-telephone-fill"></i> Contact us</a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link " href="product.php">products</a>
+                </li>
                     <li class="nav-item ">
                         <a class="nav-link " href="feedback.php">Feedback</a>
                     </li>
@@ -26,16 +29,6 @@
                 <form class="d-flex">
                     <a class="nav-link text-dark" href="login.php"><span class="btn"><i class="bi bi-person"></i> Login</span></a>
                 </form>
-
-                <!-- <?php
-                    include 'admin/error.php';
-                    if(2==$_SESSION['ROLE'])
-                    {?>
-                        <form class="d-flex">
-                            <a class="nav-link text-dark" href="logout.php">Hi, <?php echo ucwords($_SESSION['USERNAME']); ?>
-                            <span class="btn text-danger">Logout</span></a>
-                        </form>
-                    <?php }?> -->
             </div>
         </div>
     </nav>

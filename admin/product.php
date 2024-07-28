@@ -51,10 +51,10 @@ if (0 == $_SESSION['ROLE']) {
                         <input type="number" name="product_price" class="p-2 col-8" placeholder="Add Product Price">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text col-2" id="productprice">
+                        <span class="input-group-text col-2" id="productimage">
                             <h5><i class="bi bi-journal"></i>Product_image</h5>
                         </span>
-                        <input type="file"  accept="image/*" name="product_image" class="p-2 col-8" placeholder="Add Product Price">
+                        <input type="file" name="product_image" class="p-2 col-8" placeholder="Add Product Price">
 
                         <button type="submit" name="submit" class="btn p-2 col-2">submit</button>
                     </div>
@@ -72,19 +72,20 @@ if (0 == $_SESSION['ROLE']) {
 
                     <div>
                         <p>
-                            <?php echo $row["product_id"]; ?>
+                            <img src="<?php $row["product_image"]; ?>" height="80px" width="80px">
                         </p>
                         <p>
-                            <?php echo $row["product_name"]; ?>
+                            <?php echo 'product name:'. $row["product_name"]; ?>
                         </p>
                         <p>
-                            <?php echo $row["product_description"]; ?>
+                            <?php echo 'product description:'. $row["product_description"]; ?>
                         </p>
                         <p>
-                            <?php echo $row["product_price"]; ?>
+                            <?php echo 'product price:'. $row["product_price"]; ?>
                         </p>
+
                         <p>
-                            <?php echo $row["create_at"]; ?>
+                            <?php echo 'create date:'. $row["created_at"]; ?>
                         </p>
 
                         <form action="#" method="POST">

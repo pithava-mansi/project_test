@@ -29,15 +29,17 @@
             }elseif(1==$row['user_role']){
                 header("Location:admin/index.php");
             }elseif(2==$row['user_role']){
-                header("Location:index.php");
+                header("Location:dashboard.php");
                 exit();
             }
             die();                              
         }else{
           $errorMsg = "No user found on this username";
+          echo $errorMsg;
         } 
     }else{
       $errorMsg = "Username and Password is required";
+      echo $errorMsg;
     }
   }
 ?>
@@ -79,7 +81,7 @@
                     </div>
 
                     <div class="mb-3 text-center">
-                        <button type="submit" name="submit" class="btn col-">login</button>
+                        <button type="submit" name="submit" class="btn col-3">Login</button>
                     </div>
                     <div class="mb-3 text-center text-dark">
                         <h4>You Have No Account To: <a href="signup.php" type="submit" class="btn"> Signup</a></h4>

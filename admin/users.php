@@ -1,5 +1,5 @@
 <?php 
-//include 'error.php';
+include 'error.php';
 session_start();
 // Include database connection file
 include_once('controller/database/db.php');
@@ -39,6 +39,15 @@ if(0==$_SESSION['ROLE']){
                         <p><?php echo 'fname: '.$row["fname"]; ?></p>
                         <p><?php echo 'lname: '.$row["lname"]; ?></p>
                         <p><?php echo 'email: '.$row["email"]; ?></p>
+                        <form action="#" method="POST">
+                            <input type="number" value="<?php echo $row['id']; ?>" name="user_id" hidden>
+
+                            <button type="button" class="btn card-edit" data-bs-toggle="modal"
+                                data-bs-target="#updatedata"><i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn card-delete" type="submit" name="delete"
+                                onclick="return confirm('are you sure to delete')"><i class="bi bi-trash3"></i></button>
+                        </form>
                     </div>
 
                 </div>
