@@ -1,6 +1,8 @@
     <nav class="navbar container align-item-center nav-item  m-auto navbar-expand-lg mt-3 p-2 mb-3">
         <div class="container-fluid text-center">
-
+        <div class="d-flex  justify-content-center  mt-3">
+            <img class="img-logo" src="asset/css/images/logo.png">
+        </div>
             <a class="navbar-brand " href="#"> agrimart </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -27,7 +29,7 @@
                   
                 </ul>
                 <form class="d-flex">
-                    <a class="nav-link text-dark" href="login.php"><span class="btn"><i class="bi bi-person"></i> Login</span></a>
+                    <a class="nav-link text-dark" href="login.php"><i class="bi bi-person"></i></a>
                 </form>
             </div>
         </div>

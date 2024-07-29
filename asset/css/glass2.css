@@ -71,6 +71,12 @@ input:focus {
 .logo{
   height: 30%;
   width: 30%;
+  
+}
+.img-logo{
+    mix-blend-mode: multiply;
+    height: 30%;
+    width: 30%;
 }
 .img{
     border-radius: 16px;

@@ -30,8 +30,8 @@ include_once('admin/controller/database/db.php');
 			while ($row = mysqli_fetch_assoc($res)) {
 				?>
             <div class="col-lg-4 col-md-4 col-sm-12 ">
-                <div class="card m-1 text-left p-1">
-                    <p>
+                <div class="card m-1 text-left p-1 ms-2">
+                    <p class="text-center">
                         <img src="<?php $row["product_image"]; ?>" height="80px" width="80px">
                     </p>
                     <p>
@@ -47,7 +47,7 @@ include_once('admin/controller/database/db.php');
                     <p>
                         <?php echo 'create date: '. $row["created_at"]; ?>
                     </p>
-                    <form action="addtocart.php" method="POST">
+                    <form action="addtocart.php" method="POST" class="text-center">
                         <button class="btn m-3" type="submit" name="product_id"
                             value="<?php echo $row["product_id"]; ?>">addtocart</button>
                     </form>
