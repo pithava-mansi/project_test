@@ -6,7 +6,7 @@ if(0==$_SESSION['ROLE']){
 <nav class="navbar container align-item-center nav-item  m-auto navbar-expand-lg mt-3 p-2 mb-3">
     <div class="container-fluid text-center">
         <div class="d-flex  justify-content-center  mt-3">
-            <img class="logo" src="asset/css/images/logo.png">
+            <img class="img-logo" src="asset/css/images/logo.png">
         </div>
         <a class="navbar-brand " href="#"> agrimart </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -35,7 +35,7 @@ if(0==$_SESSION['ROLE']){
             </ul>
             <form class="d-flex">
                 <a class="nav-link text-dark" href="logout.php">Hi, <?php echo ucwords($_SESSION['USERNAME']); ?> <span
-                        class="btn text-danger"><i class="bi bi-person"></i> Logout</span></a>
+                        class="btn text-danger"><i class="bi bi-person-circle"></i> Logout</span></a>
             </form>
 
         </div>
