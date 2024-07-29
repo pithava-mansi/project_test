@@ -47,7 +47,7 @@ include_once('admin/controller/database/db.php');
                     <p>
                         <?php echo 'create date: '. $row["created_at"]; ?>
                     </p>
-                    <form action="addtocart.php" method="POST" class="text-center">
+                    <form action="login.php" method="POST" class="text-center">
                         <button class="btn m-3" type="submit" name="product_id"
                             value="<?php echo $row["product_id"]; ?>">addtocart</button>
                     </form>

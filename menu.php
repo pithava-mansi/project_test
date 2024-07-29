@@ -29,7 +29,7 @@
                   
                 </ul>
                 <form class="d-flex">
-                    <a class="nav-link text-dark" href="login.php"><i class="bi bi-person-circle"></i></a>
+                    <a class="nav-link text-dark" href="login.php"><span class="btn text text-dark"><i class="bi bi-person-circle"> Login</span></i></a>
                 </form>
             </div>
         </div>
