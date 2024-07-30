@@ -23,9 +23,9 @@ if(2==$_SESSION['ROLE']){
     <?php include 'menu2.php'; ?>
 
     <div class="container ">
-        <!-- <div class="row mt-1">
+        <div class="row mt-1">
             <?php include 'slider.php'; ?>
-        </div> -->
+        </div>
         <div class="row mt-1">
 
             <?php

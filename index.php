@@ -18,9 +18,9 @@ include_once('admin/controller/database/db.php');
     <?php include 'menu.php'; ?>
 
     <div class="container ">
-        <!-- <div class="row mt-1">
+        <div class="row mt-1">
             <?php include 'slider.php'; ?>
-        </div> -->
+        </div>
         <div class="row mt-1">
 
             <?php
