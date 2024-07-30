@@ -68,27 +68,27 @@ if (0 == $_SESSION['ROLE']) {
                     ?>
             <div class="col-lg-4 col-md-4 col-sm-12 ">
 
-                <div class="user-card m-1 text-center p-1">
+                <div class="user-card m-1 text-left p-1">
 
                     <div>
-                        <p>
-                            <img src="<?php $row["product_image"]; ?>" height="80px" width="80px">
+                        <p class="text-center">
+                            <img src="<?php echo $row["product_image"]; ?>" height="80px" width="80px">
                         </p>
                         <p>
-                            <?php echo 'product name:'. $row["product_name"]; ?>
+                            <?php echo 'product name: '. $row["product_name"]; ?>
                         </p>
                         <p>
-                            <?php echo 'product description:'. $row["product_description"]; ?>
+                            <?php echo 'product description: '. $row["product_description"]; ?>
                         </p>
                         <p>
-                            <?php echo 'product price:'. $row["product_price"]; ?>
-                        </p>
-
-                        <p>
-                            <?php echo 'create date:'. $row["created_at"]; ?>
+                            <?php echo 'product price: '. $row["product_price"]; ?>
                         </p>
 
-                        <form action="#" method="POST">
+                        <p>
+                            <?php echo 'create date: '. $row["created_at"]; ?>
+                        </p>
+
+                        <form action="#" method="POST" class="text-center">
                             <input type="number" value="<?php echo $row['product_id']; ?>" name="product_id" hidden>
 
                             <button type="button" class="btn card-edit" data-bs-toggle="modal"

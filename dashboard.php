@@ -37,7 +37,7 @@ if(2==$_SESSION['ROLE']){
             <div class="col-lg-4 col-md-4 col-sm-12 ">
                 <div class="card m-1 text-center p-1">
                 <p>
-                            <img src="<?php $row["product_image"]; ?>" height="80px" width="80px">
+                            <img src="<?php echo $row["product_image"]; ?>" height="80px" width="80px">
                         </p>
                         <p>
                             <?php echo 'product name: '. $row["product_name"]; ?>

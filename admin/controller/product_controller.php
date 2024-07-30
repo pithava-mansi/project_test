@@ -46,10 +46,8 @@ class products
         $file=$_FILES['product_image']['name'];
 	    $tname=$_FILES['product_image']['tmp_name'];
 
-        
-    
-	    $folder="./asset/image/".$file;
-	    move_uploaded_file($file,$folder);
+        $folder="./asset/image/".$file;
+	    move_uploaded_file($tname,$folder);
 
         $result=$obj->insert($product_name,$product_description,$product_price,$folder);
         

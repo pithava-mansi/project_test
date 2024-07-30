@@ -58,7 +58,8 @@ include 'admin/controller/user_controller.php';
                     <div class="input-group mb-3">
                         <span class="input-group-text m-1 p-2" id="basic-addon1"><i
                                 class="bi bi-house"></i></span>
-                        <input type="text" name="address" class="m-1 p-2" placeholder="address" required>
+                        <!-- <input type="text" name="address" class="m-1 p-2" placeholder="address" required> -->
+                        <textarea name="address" id="" cols="22" rows="3"></textarea>
                     </div>
                     <div class="input-group mb-3">
                         <input type="number" name="role" class="m-1 p-2" value="2" hidden>
