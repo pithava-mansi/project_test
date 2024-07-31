@@ -1,82 +1,73 @@
 <?php 
 class feedback
-    {   
-        public $db; // Declare the property
+    {
+        public $db;  // Declare the property
         
         function __construct(){        
             $conn=mysqli_connect('localhost','root','','agrimart');
-            $this->db=$conn; // Initialize the property
+            $this->db=$conn;  //Initialize the property
             if(mysqli_connect_error()){
                 echo 'failed to connect'.mysqli_connect_error();
             }
         }
-        function insert()
+        function insert($name,$email,$message)
         {
-            $sql  = "INSERT INTO `feedback`() VALUES ()";       
+            $sql="INSERT INTO `feedback`(`name`,`email`,`message`) 
+            VALUES ('$name','$email','$message')"; 
+                
             $res=mysqli_query($this->db,$sql);
             return $res;
         }
         /*
         function update()
         {
-            $sql = "UPDATE `feedback` SET `course`='$course' WHERE `course_id`='$id'";
+            $sql = "UPDATE `users` SET ``='' WHERE `id`=''";
             $res = mysqli_query($this->db, $sql);
             return $res;
-        }
-        function delete($id)
-        {
-            $sql = "DELETE FROM `feedback` WHERE `course_id`='$id'";
-            $res = mysqli_query($this->db, $sql);
-            return $res;
-        }*/
-        function view()
+        }*/        function view()
         {
                 
-            $sql = "SELECT * FROM `feedback`";
+            $sql = "SELECT * FROM `user`";
             $res = mysqli_query($this->db,$sql);
             return $res;
         }
     }
-    $obj = new feedback();
+    $obj = new user();
     if (isset($_POST['submit'])) {
-/*
+        
+        $fname= $conn->real_escape_string($_POST['fname']);
+        $lname= $conn->real_escape_string($_POST['lname']);
+        $email= $conn->real_escape_string($_POST['email']);
+       
 
-        $=$_POST[''];
-        $=$_POST[''];
-        $=$_POST[''];
-        $=$_POST[''];
-        $=$_POST[''];
-        $=$_POST[''];
-      */  
-        $result=$obj->insert();
+        $result=$obj->insert($fname,$lname,$email,$username,$pass,$mobile,$address,$role);
         
         if ($result==true) {
-          header("Location:");
+          header("Location:login.php");
           die();
         }else{
-          $errorMsg  = "error to insert data";
+          $errorMsg  = "You are not Registred..Please Try again";
           echo $errorMsg;
         }   
     }/*
     if (isset($_POST['update'])) {
-        $id = $_POST[''];
-        $= $_POST[''];
+        $id = $_POST['user_id'];
+        $course = $_POST[''];
     
         $res = $obj->update();
         if ($res) {
-            header("location:");
+            header("location:users.php");
         } else {
             echo "alert('data not updated successfully')";
         }
-    } elseif (isset($_POST['delete'])) {
-        $id = $_POST['id'];
-        // $id=$_POST[''];
-        $res = $obj->delete($id);
-        if ($res) {
-            header("location:");
-        } else {
-            echo "not deleted";
-        }
-    }*/
-
+    } */
+        // elseif (isset($_POST['delete'])) {
+        // $id = $_POST['user_id'];
+        // $res = $obj->delete($id);
+        // if ($res) {
+        //     header("location:user.php");
+        // } else {
+        //     echo "not deleted";
+        // }}
+    
 ?>
