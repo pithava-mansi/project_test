@@ -1,5 +1,5 @@
 <?php 
-class users
+class user
     {
         public $db;  // Declare the property
         
@@ -12,8 +12,9 @@ class users
         }
         function insert($fname,$lname,$email,$username,$pass,$mobile,$address,$role)
         {
-            $sql="INSERT INTO `users`(`fname`,`lname`,`email`,`username`,`pass`,`mobile`,`address`,`user_role`) 
-            VALUES ('$fname','$lname','$email','$username','$pass','$mobile','$address','$role')";       
+            $sql="INSERT INTO `user`(`fname`,`lname`,`email`,`username`,`pass`,`mobile`,`address`,`user_role`) 
+            VALUES ('$fname','$lname','$email','$username','$pass','$mobile','$address','$role')"; 
+                
             $res=mysqli_query($this->db,$sql);
             return $res;
         }
@@ -26,19 +27,19 @@ class users
         }*/
         function delete($id)
         {
-            $sql = "DELETE FROM `users` WHERE `id`='$id'";
+            $sql = "DELETE FROM `user` WHERE `id`='$id'";
             $res = mysqli_query($this->db, $sql);
             return $res;
         }
         function view()
         {
                 
-            $sql = "SELECT * FROM `users`";
+            $sql = "SELECT * FROM `user`";
             $res = mysqli_query($this->db,$sql);
             return $res;
         }
     }
-    $obj = new users();
+    $obj = new user();
     if (isset($_POST['submit'])) {
         
         $fname= $conn->real_escape_string($_POST['fname']);
@@ -46,7 +47,7 @@ class users
         $email= $conn->real_escape_string($_POST['email']);
         $username= $conn->real_escape_string($_POST['username']);
         $pass=$conn->real_escape_string(md5($_POST['password']));
-        $mobile=$conn->real_escape_string($_POST['mobileno']);
+        $mobile=$conn->real_escape_string($_POST['mobile']);
         $address=$conn->real_escape_string($_POST['address']);
         $role=$conn->real_escape_string($_POST['role']);
         /*
@@ -83,7 +84,7 @@ class users
         $id = $_POST['user_id'];
         $res = $obj->delete($id);
         if ($res) {
-            header("location:users.php");
+            header("location:user.php");
         } else {
             echo "not deleted";
         }

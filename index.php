@@ -32,7 +32,7 @@ include_once('admin/controller/database/db.php');
             <div class="col-lg-4 col-md-4 col-sm-12 ">
                 <div class="card m-1 text-left p-1 ms-2">
                     <p class="text-center">
-                        <img src="<?php echo $row["product_image"]; ?>" height="80px" width="80px">
+                        <img src="admin/<?php echo $row["product_image"]; ?>" height="80px" width="80px">
                     </p>
                     <p>
                         <?php echo 'product name: '. $row["product_name"]; ?>

@@ -53,7 +53,7 @@ include 'admin/controller/user_controller.php';
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text m-1 p-2" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
-                        <input type="number" name="mobileno" class="m-1 p-2" placeholder="mobile no" required>
+                        <input type="number" name="mobile" class="m-1 p-2" placeholder="mobile no" required>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text m-1 p-2" id="basic-addon1"><i

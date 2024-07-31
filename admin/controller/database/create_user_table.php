@@ -12,7 +12,7 @@
     }
     
     // sql to create Users table
-    $sql = "CREATE TABLE users 
+    $sql = "CREATE TABLE user 
     (
         id INT(2) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         fname VARCHAR(30) NOT NULL,

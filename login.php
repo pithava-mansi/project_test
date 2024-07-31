@@ -16,7 +16,7 @@
       $password = $conn->real_escape_string(md5($_POST['password']));
       
   if (!empty($username) && !empty($password) && !empty($email)) {
-        $sql  = "SELECT * FROM users WHERE username = '$username'";
+        $sql  = "SELECT * FROM user WHERE username = '$username'";
 
         $result =mysqli_query($conn,$sql);
         if($result->num_rows > 0){
