@@ -32,7 +32,7 @@ class feedback
             return $res;
         }
     }
-    $obj = new user();
+    $obj = new feedback();
     if (isset($_POST['submit'])) {
         
         $fname= $conn->real_escape_string($_POST['fname']);
@@ -40,7 +40,7 @@ class feedback
         $email= $conn->real_escape_string($_POST['email']);
        
 
-        $result=$obj->insert($fname,$lname,$email,$username,$pass,$mobile,$address,$role);
+        $result=$obj->insert();
         
         if ($result==true) {
           header("Location:login.php");
