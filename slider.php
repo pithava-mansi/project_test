@@ -6,22 +6,22 @@
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active "  style="height: 300px;">
+    <div class="carousel-item active "  style="height: 400px; width: 400px;">
       <div class="text-center mt-3">
         <h3>Agrimart</h3>
-        <img src="asset/css/images/use.jpeg" class="slider-img" alt="...">
+        <img src="asset/css/images/s2.jpg" class="slider-img" alt="...">
       </div>
     </div>
-    <div class="carousel-item  " style="height: 300px;">
+    <div class="carousel-item  " style="height: 400px;">
     <div class="text-center mt-3">
         <h3>Agrimart</h3>
         <img src="asset/css/images/intro.jpg" class="slider-img" alt="...">
       </div>
     </div>
-    <div class="carousel-item " style="height: 300px;">
+    <div class="carousel-item " style="height: 400px;">
     <div class="text-center mt-3">
         <h3>Agrimart</h3>
-        <img src="asset/css/images/s2.jpg" class="slider-img" alt="...">
+        <img src="asset/css/images/seed.jpeg" class="slider-img" alt="...">
       </div>
     </div>
   </div>

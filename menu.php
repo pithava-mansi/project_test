@@ -18,7 +18,7 @@
                         <a class="nav-link " href="about_us.php">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="contact_us.php"><i class="bi bi-telephone-fill"></i> Contact us</a>
+                        <a class="nav-link " href="contact_us.php"> Contact us</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link " href="product.php">products</a>
