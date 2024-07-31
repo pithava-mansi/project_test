@@ -72,7 +72,7 @@ if (0 == $_SESSION['ROLE']) {
 
                     <div>
                         <p class="text-center">
-                            <img src="<?php echo $row["product_image"]; ?>" height="80px" width="80px">
+                            <img src="<?php echo $row["product_image"]; ?>" height="90px" width="90px">
                         </p>
                         <p>
                             <?php echo 'product name: '. $row["product_name"]; ?>
