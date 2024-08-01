@@ -19,7 +19,8 @@ include_once('admin/controller/database/db.php');
 
     <div class="container ">
         <div class="row mt-1">
-            <?php include 'slider.php'; ?>
+            <!-- <?php include 'slider.php'; ?> -->
+            
         </div>
         <div class="row mt-1">
 

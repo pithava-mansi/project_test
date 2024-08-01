@@ -12,7 +12,7 @@ class user
         }
         function insert($fname,$lname,$email,$username,$pass,$mobile,$address,$role)
         {
-            $sql="INSERT INTO `user`(`fname`,`lname`,`email`,`username`,`pass`,`mobile`,`address`,`user_role`) 
+            $sql="INSERT INTO `users`(`fname`,`lname`,`email`,`username`,`pass`,`mobile`,`address`,`user_role`) 
             VALUES ('$fname','$lname','$email','$username','$pass','$mobile','$address','$role')"; 
                 
             $res=mysqli_query($this->db,$sql);
@@ -27,14 +27,14 @@ class user
         }*/
         function delete($id)
         {
-            $sql = "DELETE FROM `user` WHERE `id`='$id'";
+            $sql = "DELETE FROM `users` WHERE `id`='$id'";
             $res = mysqli_query($this->db, $sql);
             return $res;
         }
         function view()
         {
                 
-            $sql = "SELECT * FROM `user`";
+            $sql = "SELECT * FROM `users`";
             $res = mysqli_query($this->db,$sql);
             return $res;
         }

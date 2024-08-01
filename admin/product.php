@@ -46,16 +46,38 @@ if (0 == $_SESSION['ROLE']) {
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text col-2" id="productprice">
-                            <h5><i class="bi bi-journal"></i>Product_price</h5>
+                            <h5><i class="bi bi-journal"></i>Product price</h5>
                         </span>
                         <input type="number" name="product_price" class="p-2 col-8" placeholder="Add Product Price">
                     </div>
+                    <!-- <div class="input-group mb-3">
+                        <span class="input-group-text col-2" id="quantity">
+                            <h5><i class="bi bi-journal"></i>Quantity</h5>
+                        </span>
+                        <input type="number" name="quantity" class="p-2 col-8" placeholder="Add Quantity">
+                    </div> -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text col-2" id="category">
+                            <h5><i class="bi bi-journal">Category</i></h5>
+                        </span>
+                        <input type="text" name="category" class="p-2 col-8" placeholder="Add Product Category">
+                    </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text col-2" id="productimage">
-                            <h5><i class="bi bi-journal"></i>Product_image</h5>
+                            <h5><i class="bi bi-journal"></i>Product image</h5>
                         </span>
                         <input type="file" name="product_image" class="p-2 col-8" placeholder="Add Product Price">
 
+
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text col-2" id="status">
+                            <h5><i class="bi bi-journal">Product Status</i></h5>
+                        </span>
+                        <select id="status" name="status" class="col-8">
+                            <option value="Available">Available</option>
+                            <option value="Out of Stock">Out of Stock</option>
+                        </select>
                         <button type="submit" name="submit" class="btn p-2 col-2">submit</button>
                     </div>
                 </form>
@@ -89,7 +111,7 @@ if (0 == $_SESSION['ROLE']) {
                         </p>
 
                         <form action="#" method="POST" class="text-center">
-                            <input type="number" value="<?php echo $row['product_id']; ?>" name="product_id" hidden>
+                            <input type="number" value="<?php echo $row['id']; ?>" name="product_id" hidden>
 
                             <button type="button" class="btn card-edit" data-bs-toggle="modal"
                                 data-bs-target="#updatedata"><i class="bi bi-pencil-square"></i>

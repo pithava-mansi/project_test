@@ -24,10 +24,11 @@ class feedback
             $sql = "UPDATE `users` SET ``='' WHERE `id`=''";
             $res = mysqli_query($this->db, $sql);
             return $res;
-        }*/        function view()
+        }*/        
+        function view()
         {
                 
-            $sql = "SELECT * FROM `user`";
+            $sql = "SELECT * FROM `feedback`";
             $res = mysqli_query($this->db,$sql);
             return $res;
         }
@@ -35,15 +36,12 @@ class feedback
     $obj = new feedback();
     if (isset($_POST['submit'])) {
         
-        $fname= $conn->real_escape_string($_POST['fname']);
-        $lname= $conn->real_escape_string($_POST['lname']);
-        $email= $conn->real_escape_string($_POST['email']);
-       
+      
 
         $result=$obj->insert();
         
         if ($result==true) {
-          header("Location:login.php");
+          header("Location:feedback.php");
           die();
         }else{
           $errorMsg  = "You are not Registred..Please Try again";

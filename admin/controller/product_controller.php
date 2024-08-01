@@ -10,9 +10,9 @@ class products
                 echo 'failed to connect'.mysqli_connect_error();
             }
         }
-        function insert($product_name,$product_description,$product_price,$folder)
+        function insert($product_name,$product_description,$product_price,$category,$folder,$status)
         {
-            $sql  = "INSERT INTO `products` (`product_name`, `product_description`, `product_price`,`product_image`) VALUES ('$product_name','$product_description','$product_price','$folder')";       
+            $sql  = "INSERT INTO `products`(`name`, `description`, `price`,`category`, `image_url`, `created_at`, `updated_at`, `status`) VALUES ('$product_name','$product_description','$product_price','$category','$folder','$status')";       
             $res=mysqli_query($this->db,$sql);
             return $res;
         }
@@ -25,7 +25,7 @@ class products
         }*/
         function delete($product_id)
         {
-            $sql = "DELETE FROM `products` WHERE `product_id`='$product_id'";
+            $sql = "DELETE FROM `products` WHERE `id`='$product_id'";
             $res = mysqli_query($this->db, $sql);
             return $res;
         }
@@ -42,14 +42,18 @@ class products
         $product_name=$_POST['product_name'];
         $product_description=$_POST['product_description'];
         $product_price=$_POST['product_price'];
+        // $quantity=$_POST['quantity'];
+        $category=$_POST['category'];   
 
         $file=$_FILES['product_image']['name'];
 	    $tname=$_FILES['product_image']['tmp_name'];
 
-        $folder="./asset/image/".$file;
+        $folder="asset/image/".$file;
 	    move_uploaded_file($tname,$folder);
 
-        $result=$obj->insert($product_name,$product_description,$product_price,$folder);
+        $status = $_POST['status'];
+
+        $result=$obj->insert($product_name,$product_description,$product_price,$category,$folder,$status);
         
         if ($result==true) {
           header("Location:product.php");
